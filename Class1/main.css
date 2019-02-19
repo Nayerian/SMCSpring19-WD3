@@ -4,9 +4,9 @@
 .row{
     background-color: pink;
 }
-.col-6-first-child{
+[class^="col"]:first-child{
     background-color: honeydew;
 }
-.col-6-last-child{
+[class^="col"]:last-child{
     background-color: salmon;
 }

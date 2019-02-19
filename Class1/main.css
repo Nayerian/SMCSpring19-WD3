@@ -1,0 +1,12 @@
+.container{
+    background-color: blue;
+}
+.row{
+    background-color: pink;
+}
+.col-6-first-child{
+    background-color: honeydew;
+}
+.col-6-last-child{
+    background-color: salmon;
+}

@@ -1,0 +1,18 @@
+.container {
+    background-color: dodgerblue;
+}
+
+.row {
+    background-color: rgba(0, 140, 255, 0.609);
+}
+
+[class^="col-"]:first-child {
+    background-color: rgb(55, 178, 209);
+}
+
+[class^="col-"]:last-child {
+    background-color:  rgb(55, 178, 209);
+}
+nav { 
+    background-color: rgba(52, 124, 206, 0.719);
+}

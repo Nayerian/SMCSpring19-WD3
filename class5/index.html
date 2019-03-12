@@ -14,14 +14,16 @@
  
     <script>
         var text =document.getElementById("text1");
+        var redVal = Math.random()*255;
         var greenVal = Math.random()*255+2;
+        var blueVal = Math.random()*255;
         console.log(greenVal);
 
 
 
 
         console.log(text);
-        text.style.backgroundColor = "rgb(255,0,255)";
+        text.style.backgroundColor = "rgb(255, "+ greenVal + ", 205)";
         </script>
 </body>
 </html>

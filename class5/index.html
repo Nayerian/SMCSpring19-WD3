@@ -10,27 +10,69 @@
 <body>
     <div>
     <p id="text1">lllldfefgsfbdlllldfefgsfbdhrghrhrthgjsfkgnsndustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recentlyfnsfngkr;jgjkgeghrghrhrthgjsfkgnsfnsfngkr;jgjkgeg</p>
-    <button id="button1">color me!</button>
+    <button id="button1">Color Me!</button>
+    <button id="button2">Hide Me!</button>
     </div>
     <p id="text2">fdydrjyk,hmrhglllldfefgsfbdhrghrhrthgjsfkgnsfnndustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recentlysfngkr;jgjkgeglllldfefgsfbdhrghrhrthgjsfkgnsfnsfngkr;jgjkgegertw4te</p>
+    <button id="button3">Color Me!</button>
+    <button id="button4">Hide Me!</button>
 
- 
     <script>
-var button = document.getElementById ("button1");
-button.addEventListener ("click", changeColor);
 
-        function changeColor (){
-        var text =document.getElementById("text1");
-        var redVal = Math.random()*255;
-        var greenVal = Math.random()*255;
-        var blueVal = Math.random()*255;
 
-        console.log(greenVal);
+// var button = document.getElementById ("button1");
+// var button = document.getElementById ("button3");
+// var displayButton1 = document.getElementById ("button2");
+// var displayButton2 = document.getElementById ("button4");
+// var text1 = document.getElementById("text1");
+// var text2 = document.getElementById("text2");
 
-        text.style.backgroundColor = "rgb("+ redVal +"," + greenVal + "," + blueVal + ")";
 
-        }
+
+//         function changeColor (textElement){
+       
+//         var redVal = Math.random()*255;
+//         var greenVal = Math.random()*255;
+//         var blueVal = Math.random()*255;
+
+//         console.log(greenVal);
+
+//         textElement.style.backgroundColor = "rgb("+ redVal +"," + greenVal + "," + blueVal + ")";
+
+//         }
+//      function hideText(textElement){
+            
+//             text.style.display = "none";
+//         }
+//         button.addEventListener ("click", changeColor(text1));
+//         button.addEventListener ("click", changeColor(text2));
+//     displayButton1.addEventListener("click",hideText(text1));
+//     displayButton2.addEventListener("click",hideText(text2));
+
         
         </script>
+         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script>
+        $(document).ready(function(){
+            $("#button1").click(function(){
+console.log(this);
+                var redVal = Math.random()*255;
+                var greenVal = Math.random()*255;
+                var blueVal = Math.random()*255;
+                $(this).sibilings("p").css("background-color","rgb("+ redVal +"," + greenVal + "," + blueVal + ")";)
+
+            });
+
+            $("#button2").click(function(){
+                $("text1").hide();
+
+            });
+);
+        
+        
+        
+        </script>
+
+
 </body>
 </html>

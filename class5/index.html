@@ -1,78 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    
 </head>
 <body>
     <div>
-    <p id="text1">lllldfefgsfbdlllldfefgsfbdhrghrhrthgjsfkgnsndustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recentlyfnsfngkr;jgjkgeghrghrhrthgjsfkgnsfnsfngkr;jgjkgeg</p>
-    <button id="button1">Color Me!</button>
-    <button id="button2">Hide Me!</button>
+        <p id="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend velit sit amet vulputate dignissim. Curabitur eget rhoncus tortor. Cras metus lectus, consectetur a ultrices et, varius non sapien. Phasellus laoreet ex quis ligula euismod aliquet. Vivamus laoreet lacus a ligula tristique dictum. Nam eleifend, sapien nec finibus porttitor, orci enim vehicula ligula, sed facilisis lectus tortor sit amet tortor. Vivamus quis justo nisi. Vestibulum eget mi sed magna vestibulum lobortis vel eu justo. Ut tincidunt nisl quis ipsum convallis suscipit. Nulla facilisi. Nulla nec sem sed leo feugiat efficitur id eu enim. Pellentesque venenatis gravida libero, tempor tempus justo ornare id. Sed et mi eu massa iaculis dignissim. Sed dignissim justo metus, ac posuere sem finibus id. Vivamus quis maximus dui. Phasellus massa ligula, aliquet nec viverra quis, fringilla id metus. </p>
+        <button id="button1_1" class="color-button">Color Me!</button>
+        <button id="button1_2" class="hide-button">Hide Me!</button>
     </div>
-    <p id="text2">fdydrjyk,hmrhglllldfefgsfbdhrghrhrthgjsfkgnsfnndustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recentlysfngkr;jgjkgeglllldfefgsfbdhrghrhrthgjsfkgnsfnsfngkr;jgjkgegertw4te</p>
-    <button id="button3">Color Me!</button>
-    <button id="button4">Hide Me!</button>
 
+    <div>
+        <p id="text2">Mauris risus turpis, consequat eget ligula ut, volutpat ullamcorper neque. Ut varius, lacus placerat finibus interdum, metus felis mattis ipsum, non vulputate metus felis et diam. Mauris vitae semper augue, et aliquam justo. Duis pulvinar eros nec nisl consequat dapibus. Suspendisse potenti. Donec sagittis commodo nisl. Sed rutrum sodales tellus at dictum. Duis aliquet dolor at tellus dignissim, sed semper enim congue. Nulla in ullamcorper sapien. In id justo non leo semper viverra. Proin nec mi id risus sodales convallis. Sed vel sapien eget lacus vestibulum aliquam. Vestibulum cursus dignissim velit, elementum sodales neque hendrerit at. </p>
+        <button id="button2_1" class="color-button">Color Me!</button>
+        <button id="button2_2" class="hide-button">Hide Me!</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>
-
-
-// var button = document.getElementById ("button1");
-// var button = document.getElementById ("button3");
-// var displayButton1 = document.getElementById ("button2");
-// var displayButton2 = document.getElementById ("button4");
-// var text1 = document.getElementById("text1");
-// var text2 = document.getElementById("text2");
-
-
-
-//         function changeColor (textElement){
-       
-//         var redVal = Math.random()*255;
-//         var greenVal = Math.random()*255;
-//         var blueVal = Math.random()*255;
-
-//         console.log(greenVal);
-
-//         textElement.style.backgroundColor = "rgb("+ redVal +"," + greenVal + "," + blueVal + ")";
-
-//         }
-//      function hideText(textElement){
-            
-//             text.style.display = "none";
-//         }
-//         button.addEventListener ("click", changeColor(text1));
-//         button.addEventListener ("click", changeColor(text2));
-//     displayButton1.addEventListener("click",hideText(text1));
-//     displayButton2.addEventListener("click",hideText(text2));
-
-        
-        </script>
-         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script>
         $(document).ready(function(){
-            $("#button1").click(function(){
-console.log(this);
+            $(".color-button").click(function(){
+                console.log(this);
                 var redVal = Math.random()*255;
                 var greenVal = Math.random()*255;
                 var blueVal = Math.random()*255;
-                $(this).sibilings("p").css("background-color","rgb("+ redVal +"," + greenVal + "," + blueVal + ")";)
-
+                $(this).siblings("p").css("background-color", "rgb("+redVal+", "+greenVal+", "+blueVal+")");
             });
-
-            $("#button2").click(function(){
-                $("text1").hide();
-
+            $(".hide-button").click(function(){
+                if($(this).siblings("p").css("display") === "none" ){
+                    $(this).text("Hide Me!");
+                }
+                else {
+                    $(this).text("Show Me!");
+                }
+                $(this).siblings("p").toggle();
             });
-);
-        
-        
-        
-        </script>
+        });
+    </script>
 
-
+    <script>
+        // var colorButton1 = document.getElementById("button1_1");
+        // var colorButton2 = document.getElementById("button2_1");
+        // var displayButton1 = document.getElementById("button2_1");
+        // var displayButton2 = document.getElementById("button2_2");
+        // var text1 = document.getElementById("text1");
+        // var text2 = document.getElementById("text2");
+        // function changeColor(textElement){
+        //     var redVal = Math.random()*255;
+        //     var greenVal = Math.random()*255;
+        //     var blueVal = Math.random()*255;
+        //     console.log(greenVal);
+        //     textElement.style.backgroundColor = "rgb("+redVal+", "+greenVal+", "+blueVal+")"; 
+        // }
+        // function hideText(textElement){
+        //     textElement.style.display = "none";
+        // }
+        // colorButton1.addEventListener("click", changeColor(text1));
+        // colorButton2.addEventListener("click", changeColor(text2));
+        // displayButton1.addEventListener("click", hideText(text1));
+        // displayButton2.addEventListener("click", hideText(text2));
+    </script>
 </body>
 </html>

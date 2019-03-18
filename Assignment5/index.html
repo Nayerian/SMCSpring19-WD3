@@ -6,64 +6,104 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    
+    <style>
+        .box {
+            width: 100px;
+            height: 25px;
+            padding: 10px;
+            border: 5px solid red;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <p id="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend velit sit amet vulputate dignissim. Curabitur eget rhoncus tortor. Cras metus lectus, consectetur a ultrices et, varius non sapien. Phasellus laoreet ex quis ligula euismod aliquet. Vivamus laoreet lacus a ligula tristique dictum. Nam eleifend, sapien nec finibus porttitor, orci enim vehicula ligula, sed facilisis lectus tortor sit amet tortor. Vivamus quis justo nisi. Vestibulum eget mi sed magna vestibulum lobortis vel eu justo. Ut tincidunt nisl quis ipsum convallis suscipit. Nulla facilisi. Nulla nec sem sed leo feugiat efficitur id eu enim. Pellentesque venenatis gravida libero, tempor tempus justo ornare id. Sed et mi eu massa iaculis dignissim. Sed dignissim justo metus, ac posuere sem finibus id. Vivamus quis maximus dui. Phasellus massa ligula, aliquet nec viverra quis, fringilla id metus. </p>
-        <button id="button1_1" class="color-button">Color Me!</button>
-        <button id="button1_2" class="hide-button">Hide Me!</button>
-    </div>
+    <div class="box"></div>
 
     <div>
-        <p id="text2">Mauris risus turpis, consequat eget ligula ut, volutpat ullamcorper neque. Ut varius, lacus placerat finibus interdum, metus felis mattis ipsum, non vulputate metus felis et diam. Mauris vitae semper augue, et aliquam justo. Duis pulvinar eros nec nisl consequat dapibus. Suspendisse potenti. Donec sagittis commodo nisl. Sed rutrum sodales tellus at dictum. Duis aliquet dolor at tellus dignissim, sed semper enim congue. Nulla in ullamcorper sapien. In id justo non leo semper viverra. Proin nec mi id risus sodales convallis. Sed vel sapien eget lacus vestibulum aliquam. Vestibulum cursus dignissim velit, elementum sodales neque hendrerit at. </p>
-        <button id="button2_1" class="color-button">Color Me!</button>
-        <button id="button2_2" class="hide-button">Hide Me!</button>
+        <p id="text2">Mauris risus turpis, consequat eget ligula ut, volutpat ullamcorper neque. Ut varius, lacus
+            placerat finibus interdum, metus felis mattis ipsum, non vulputate metus felis et diam. Mauris vitae semper
+            augue, et aliquam justo. Duis pulvinar eros nec nisl consequat dapibus. Suspendisse potenti. Donec sagittis
+            commodo nisl. Sed rutrum sodales tellus at dictum. Duis aliquet dolor at tellus dignissim, sed semper enim
+            congue. Nulla in ullamcorper sapien. In id justo non leo semper viverra. Proin nec mi id risus sodales
+            convallis. Sed vel sapien eget lacus vestibulum aliquam. Vestibulum cursus dignissim velit, elementum
+            sodales neque hendrerit at. </p>
+        <button id="primaryButton" class="multiButton">Click me!</button>
+        <button id="alertButton" class="customAlert">Alert!</button>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <form action="/action_page.php">
+        First name:<br>
+        <input class='firstname' type="text" name="firstname" value="">
+        <br>
+        <div class="firstNameAlert"></div>
+        Last name:<br>
+        <input class="lastname" type="text" name="lastname" value="">
+        <br>
+        <div class="lastNameAlert"></div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <button id="animateButton" class="animate">Animate the button :)</button>
+    <div id="superCoolBox" class="anBox" style="background:#98bf21;height:100px;width:100px;margin:6px;"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script>
-        $(document).ready(function(){
-            $(".color-button").click(function(){
-                console.log(this);
-                var redVal = Math.random()*255;
-                var greenVal = Math.random()*255;
-                var blueVal = Math.random()*255;
-                $(this).siblings("p").css("background-color", "rgb("+redVal+", "+greenVal+", "+blueVal+")");
-            });
-            $(".hide-button").click(function(){
-                if($(this).siblings("p").css("display") === "none" ){
-                    $(this).text("Hide Me!");
+        $(document).ready(function () {
+            $(".multiButton").click(function () {
+                // Change color.
+
+                if ($(this).text() === "Click me!") {
+                    $(this).siblings("p").css("text-transform", "uppercase");
+                    $(this).siblings("p").css("text-decoration", "underline");
+                    $(this).siblings("p").css("color", "hotpink");
+                    $(this).text("Click me again!");
                 }
                 else {
-                    $(this).text("Show Me!");
+                    $(this).siblings("p").css("text-transform", "lowercase");
+                    $(this).siblings("p").css("text-decoration", "none");
+                    $(this).siblings("p").css("color", "green");
+                    $(this).text("Click me!");
                 }
-                $(this).siblings("p").toggle();
             });
+
+            $(".customAlert").click(function () {
+                $(".box").text("Alert!!!");
+            });
+            
+            $(".firstname").blur(function () {
+                $(".firstNameAlert").text("Please, kind sir, give me content.");
+            });
+            
+            $(".lastname").blur(function () {
+                $(".lastNameAlert").text("I beg you, provide me with your info <3");
+            });
+
+            $(".animate").click(function () {
+                $(".anBox").animate(
+                    {
+                        height: "300px",
+                        width: "300px"
+                    }
+                    , 2000,
+                    goBack);
+            });
+            
+            function goBack() {
+                $(".anBox").animate(
+                    {
+                        height: "100px",
+                        width: "100px"
+                    }
+                    , 2000);
+            }
         });
     </script>
-
-    <script>
-        // var colorButton1 = document.getElementById("button1_1");
-        // var colorButton2 = document.getElementById("button2_1");
-        // var displayButton1 = document.getElementById("button2_1");
-        // var displayButton2 = document.getElementById("button2_2");
-        // var text1 = document.getElementById("text1");
-        // var text2 = document.getElementById("text2");
-        // function changeColor(textElement){
-        //     var redVal = Math.random()*255;
-        //     var greenVal = Math.random()*255;
-        //     var blueVal = Math.random()*255;
-        //     console.log(greenVal);
-        //     textElement.style.backgroundColor = "rgb("+redVal+", "+greenVal+", "+blueVal+")"; 
-        // }
-        // function hideText(textElement){
-        //     textElement.style.display = "none";
-        // }
-        // colorButton1.addEventListener("click", changeColor(text1));
-        // colorButton2.addEventListener("click", changeColor(text2));
-        // displayButton1.addEventListener("click", hideText(text1));
-        // displayButton2.addEventListener("click", hideText(text2));
-    </script>
 </body>
+
 </html>

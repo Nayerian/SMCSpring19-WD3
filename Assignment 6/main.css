@@ -3,7 +3,7 @@
 }
 body{
         background-image: url("img/bk.jpg"); /* The image used */
-        background-color: #aec7ce;* 
+        background-color: #aec7ce;
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover; /* Resize the background image to cover the entire container */

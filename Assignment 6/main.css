@@ -3,14 +3,18 @@
 }
 body{
         background-image: url("img/bk.jpg"); /* The image used */
-        background-color: #aec7ce;
+        /*find a blue background image!
+        play with typography
+        put every thing in container,row, column
+        background-color: white;
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; /* Resize the background image to cover the entire container */
-        
+        background-size: cover; /* Resize the background image to cover the entire container or I can use contain*/
+        min-height: 100vh;
       }
     
 .intelezi{margin-top: 10%;}
 
 
 .shadow{text-shadow: 2px 2px black;}
+.modal-title{width: 100%;}

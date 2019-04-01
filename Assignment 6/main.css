@@ -17,8 +17,8 @@ body{
         min-height: 100vh;
       }
       @media only screen 
-and () 
-and (max-width : 1024px)  { 
+and (min-width : 375px) 
+and (max-width : 667px)  { 
   .logo{
     display: none;
   }

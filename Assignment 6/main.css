@@ -16,6 +16,13 @@ body{
         background-size: cover; /* Resize the background image to cover the entire container or I can use contain*/
         min-height: 100vh;
       }
+      @media only screen 
+and () 
+and (max-width : 1024px)  { 
+  .logo{
+    display: none;
+  }
+}
     
 .intelezi{margin-top: 10%;}
 
@@ -87,3 +94,8 @@ body{
       position: absolute;
       bottom: 0;
   }
+  iframe{
+    margin-top: 1%;
+    margin-bottom: 2%;
+  }
+  

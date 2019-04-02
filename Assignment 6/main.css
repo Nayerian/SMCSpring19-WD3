@@ -7,21 +7,15 @@
     max-height: 500px;
 }
 body{
-        background-image: url("img/bk.jpg"); /* The image used */
-        /*put every thing in container,row, column*/
-        background-color: white;
-        background-position: center; /* Center the image */
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; /* Resize the background image to cover the entire container or I can use contain*/
-        min-height: 100vh;
-      }
-      @media only screen 
-and (min-width : 375px) 
-and (max-width : 667px)  { 
-  .logo{
-    display: none;
-  }
+  background-image: url("img/bk.jpg"); /* The image used */
+  /*put every thing in container,row, column*/
+  background-color: white;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container or I can use contain*/
+  min-height: 100vh;
 }
+
     
 .intelezi{margin-top: 10%;
 font-family: 'Passion One', cursive;
@@ -98,5 +92,9 @@ font-family: 'Passion One', cursive;
   iframe{
     margin-top: 1%;
     margin-bottom: 2%;
+  }
+  .logo{
+    width: 20%;
+    height: 20%;
   }
   

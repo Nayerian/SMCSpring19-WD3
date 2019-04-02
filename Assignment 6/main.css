@@ -20,7 +20,9 @@ body{
 .intelezi{margin-top: 10%;
 font-family: 'Passion One', cursive;
 }
-
+h1{
+  font-family: 'Passion One', cursive;
+}
 
 .shadow{text-shadow: 2px 2px black;}
 .modal-title{width: 100%;}
@@ -50,7 +52,7 @@ font-family: 'Passion One', cursive;
   .parallax2{
       height: 40vw;
   background-image: url(img/nbn.jpg);
-  background-position: 50%;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -97,4 +99,7 @@ font-family: 'Passion One', cursive;
     width: 20%;
     height: 20%;
   }
+  /*.about{
+    columns: 2;}It works!*/
+  
   

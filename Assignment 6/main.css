@@ -82,7 +82,7 @@ h1{
       padding-top: 12vh;
   }
   .footer{
-      background-color: black;
+      background-color: #0097d1;
       color: aliceblue;
       height: 10vh;
       position: relative;
@@ -99,7 +99,11 @@ h1{
     width: 20%;
     height: 20%;
   }
-  /*.about{
-    columns: 2;}It works!*/
+  .about{
+    width: 70%;}
   
+  .row-table{
+
+    margin-left: 10%;
+  }
   

@@ -7,9 +7,9 @@
     max-height: 500px;
 }
 body{
-  background-image: url("img/bk.jpg"); /* The image used */
+ /* background-image: url("img/bk.jpg");  The image used */
   /*put every thing in container,row, column*/
-  background-color: white;
+  background-color: rgb(157, 207, 255);
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container or I can use contain*/
@@ -114,4 +114,10 @@ h1{
   }
  
 
-  
+  .table{
+    width: 97%;
+    margin-left: 1.7%;
+  }
+  .jumbotron{
+    background-color: #24a2b7;
+  }

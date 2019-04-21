@@ -7,110 +7,124 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<style></style>
-    <title>auto select</title>
+
+    <style>
+        .invalid-feedback, .valid-feedback {
+            display: block;
+        }
+    </style>
+    <title>Auto Select</title>
   </head>
   <body>
-      <div class="container">
-          <div class="row">
-              <div class="col">
-                    <h1>select your dream car!</h1>
-              </div>
-          </div>
-      
-      <div class="row">
+    <div class="container">
+        <div class="row">
             <div class="col">
-                  <form action="form-process.php" method="POST">
-                     <!--<div class="form-group">
-                          <label for="username">username</label>
-                      <input id="username" type="text" name="username" class="form-control">
-                    </div>
-                    <div class="form-group">
-                            <label for="username">password</label>
-                      <input id="password" type="password" name="password" class="form-control">
-                    </div>--> 
-                    <div class="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
-            <select class="form-control" id="carmake" name="carmake">
-                 <option value="audi">Audi</option>
-                 <option value="bmw">BMW</option>
-                <option value="lexus">Lexus</option>
-                <option value="tesla">Tesla</option>
-                <option value="merc">Mercedes</option>
-            </select>
+                <h1>Select your dream car!</h1>
             </div>
+        </div>
 
-            <div class="form-group">
-            <label for="exampleFormControlSelect1">Select the model of the car</label>
-            <select class="form-control" id="carmodel" name="carmodel" disabled>
-                 <option value="audi">Audi</option>
-                 <option value="bmw">BMW</option>
-                <option value="lexus">Lexus</option>
-                <option value="tesla">Tesla</option>
-                <option value="merc">Mercedes</option>
-            </select>
-            </div>
-            <div class="form-group">
-                <label for="pricerange">Example range</label>
-                <input type="range" class="custom">
-            </div>
-                    <button type="submit" class="btn btn-primary">submit</button>
-                      </form>
+        <div class="row">
+            <div class="col">
+
+                <form action="form-process.php" method="POST">
+                    <div class="form-group">
+                    <label for="carMake">Select the make of the car:</label>
+                    <select class="form-control" id="carMake" name="carmake">
+                        <option value="audi">Audi</option>
+                        <option value="bmw">BMW</option>
+                        <option value="lexus">Lexus</option>
+                        <option value="merc">Mercedes</option>
+                        <option value="tesla">Tesla</option>
+                    </select>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="carModel">Select the model of the car:</label>
+                    <select class="form-control" id="carModel" name="carmodel" disabled>
+                        <option></option>
+                    </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="priceRange">How much would you pay?</label>
+                        <input type="range" class="custom-range" min="0" max="100000" id="priceRange" >
+                        
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
 
             </div>
         </div>
     </div>
 
-    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script>
-  $(document).ready(function(){
-var audimodels = ["52","53","55","57"];
-var bmwmodels=["2-series", "3-series", "4-series"];
-var mercmodels=["class-A","class-B","class-C","class-D","class-E"];
-var lexusmodels=["IS","ES","LX"];
-var teslamodels=["Roadster","Model S","Model X","Model-3"];
-$("#carmake").change(function(){
-
-    var currentSelect= $(this).val();
-    var innerContent="";
-    $('#carmodel').removeAttr('disabled');
-   
-        
     
- switch(currentSelect){
-    case "audi":
-    for(var i = 0; i< audimodels.length; i++){
-        innerContent += '<option value ="' + bmwmodels[i].tolowercase()+'">' + audimodels[i] + "</option>";
-    }
-    break;
-    default:
-    break;
-    }
-    $('#carmodel').html(innerContent);
-}
+    <script>
+        $(document).ready(function(){
+            var audiModels = ["S2", "S3", "S5", "S7"];
+            var bmwModels = ["2-Series", "3-Series", "4-Series", "5-Series", "7-Series"];
+            var mercModels = ["Class-A", "Class-B", "Class-C", "Class-E", "Class-S", "Class-G"];
+            var lexusModels = ["IS", "ES", "LX"];
+            var teslaModels = ["Roadster", "Model S", "Model X", "Model 3"];
 
-  }
+            $("#carMake").change(function(){
+                var currentSelect = $(this).val();
+                var innerContent = "";
+                $('#carModel').removeAttr('disabled');
 
-})
+                switch(currentSelect){
+                    case "audi":
+                        for(var i = 0; i < audiModels.length; i++){
+                            innerContent += '<option value="' + audiModels[i].toLowerCase() + '">' + audiModels[i] + "</option>";
+                        }
+                        break;
+                    case "bmw":
+                        for(var i = 0; i < bmwModels.length; i++){
+                            innerContent += '<option value="' + bmwModels[i].toLowerCase() + '">' + bmwModels[i] + "</option>";
+                        }
+                        break;
+                    case "lexus":
+                        for(var i = 0; i < lexusModels.length; i++){
+                            innerContent += '<option value="' + lexusModels[i].toLowerCase() + '">' + lexusModels[i] + "</option>";
+                        }
+                        break;
+                    case "merc":
+                        for(var i = 0; i < mercModels.length; i++){
+                            innerContent += '<option value="' + mercModels[i].toLowerCase() + '">' + mercModels[i] + "</option>";
+                        }
+                        break;
+                    case "tesla":
+                        for(var i = 0; i < teslaModels.length; i++){
+                            innerContent += '<option value="' + teslaModels[i].toLowerCase() + '">' + teslaModels[i] + "</option>";
+                        }
+                        break;
+                    default:
+                        break;
+                }//end of switch
 
-  })
-  $("#pricerange").change(function(){
-      var offeredprice = $(this).val();
-      if(offeredprice< 45000){
-        $(this).after('<div class="invalid-feedback">Don\'t lowball us!!</div>');
+                console.log(innerContent);
 
-      }
-      else{
-          $(this).after('<div class="valid-feedback"></div>');
+                $('#carModel').html(innerContent);  
+            }); // end of carMake change event
 
-      }
-      
-  })
-  </script>
+
+            $("#priceRange").change(function(){
+                var offeredPrice = $(this).val();
+
+                $(this).siblings(".invalid-feedback").remove();
+                if(offeredPrice < 45000){
+                    $(this).after('<div class="invalid-feedback">Don\'t lowball us!!!</div>');
+                }
+                else {
+                    $(this).after('<div class="valid-feedback">We\'ll take it!</div>');
+                }
+            });
+        });// end of document ready
+    </script>
 </body>
-</html>
+</html> 

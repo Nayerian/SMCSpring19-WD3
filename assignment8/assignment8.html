@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        .invalid-feedback, .valid-feedback {
+            display: block;
+        }
+    </style>
+    <title>music</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Select your favorite music artist!</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <!--radio-->
+                <p>Select the artist you like most:</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="artist1" value="mj">
+                    <label class="form-check-label" for="artist">
+                        Michael Jackson
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="artist2" value="Queen">
+                    <label class="form-check-label" for="artist">
+                        Queen
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="artist3" value="bsb">
+                    <label class="form-check-label" for="artist">
+                        Backstreet Boys
+                    </label>
+                  </div> 
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="artist4" value="e65">
+                    <label class="form-check-label" for="artist">
+                        Eiffel 65
+                    </label>
+                  </div>
+
+                <!--end of radio-->
+                <br>
+                <!--
+                <form action="form-process.php" method="POST">
+                    <div class="form-group">
+                    <label for="artist">Select the artist you like most:</label>
+                    <select class="form-control" id="artist" name="artist">
+                        <option value="mj">Michael Jackson</option>
+                        <option value="Queen">Queen</option>
+                        <option value="bsb">Backstreet Boys</option>
+                        <option value="e65">Eiffel 65</option>                        
+                    </select>
+                    </div>
+                    -->
+                    <form>
+                    <div class="form-group">
+                    <label for="songModel">Select your favorite song:</label>
+                    <select class="form-control" id="songModel" name="songModel" disabled>
+                        <option></option>
+                    </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script>
+        $(document).ready(function(){
+            var mjSongs = ["Thriller", "Billie Jean", "Earth Song", "Smooth Criminal"];
+            var queenSongs = ["We Will Rock You", "Bohemian Rhapsody", "We Are the Champions", "Another One Bites the Dust", "Don't Stop Me Now"];
+            var bsbSongs = ["Incomplete", "I'm Still", "Larger Than Life", "Helpless", "Don't Want You Back", "The Call"];
+            var e65Songs = ["Blue", "Move Your Body", "Too Much of Heaven"];
+            $("#artist,#artist1,#artist2,#artist3,#artist4").change(function(){
+                var currentSelect = $(this).val();
+                var innerContent = "";
+                $('#songModel').removeAttr('disabled');
+                switch(currentSelect){
+                    case "mj":
+                        for(var i = 0; i < mjSongs.length; i++){
+                            innerContent += '<option value="' + mjSongs[i].toLowerCase() + '">' + mjSongs[i] + "</option>";
+                        }
+                        break;
+                    case "Queen":
+                        for(var i = 0; i < queenSongs.length; i++){
+                            innerContent += '<option value="' + queenSongs[i].toLowerCase() + '">' + queenSongs[i] + "</option>";
+                        }
+                        break;
+                    case "bsb":
+                        for(var i = 0; i < bsbSongs.length; i++){
+                            innerContent += '<option value="' + bsbSongs[i].toLowerCase() + '">' + bsbSongs[i] + "</option>";
+                        }
+                        break;
+                    case "e65":
+                        for(var i = 0; i < e65Songs.length; i++){
+                            innerContent += '<option value="' + e65Songs[i].toLowerCase() + '">' + e65Songs[i] + "</option>";
+                        }
+                        break;
+                    default:
+                        break;
+                }//end of switch
+                console.log(innerContent);
+                $('#songModel').html(innerContent);  
+            }); // end of artist change event
+        });// end of document ready
+    </script>
+</body>
+</html> 

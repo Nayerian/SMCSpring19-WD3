@@ -2,7 +2,15 @@
  @charset "utf-8";
 /*css document*/
 
- body{ background-color: black; }
+ body{ 
+	background-image: url("../img/bk.jpg");
+  background-color: #000000;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+ }
  section{
  	width: 100vw;
  	height: 5vh;
@@ -57,7 +65,10 @@
 
 			.block {
 				position: absolute;
-				background-color: antiquewhite;
+				background-image: url("../img/box.jpg");
+				background-position: center;
+     		background-repeat: no-repeat;
+ 			  background-size: cover;
 				left: 50px;
 				width: 90px;
 				height: 90px;
@@ -65,7 +76,30 @@
 			}
 			
 
-
-
+			#green1 {
+				background-color: rgb(161, 232, 89);
+				width: 20vw;
+				height: 5vh;
+				text-align: center;
+				border: 5px solid rgb(69, 189, 69);
+				margin: 3px;
+				font-size: 14px;
+			}
+			#green2 {
+				background-color: rgb(149, 255, 145);
+				width: 20vw;
+				height: 5vh;
+				text-align: center;
+				border: 5px solid rgb(55, 255, 0);
+				margin: 3px;
+				font-size: 14px;
+			}
+			button {
+				font-size: 90%;
+				background-color: rgb(255, 174, 0);
+			}
+			#green{
+				margin-top: 10%;
+			}
 
 

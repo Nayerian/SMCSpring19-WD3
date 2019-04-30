@@ -16,15 +16,50 @@
         <section class="blue"></section>
         <section class="purple"></section>
  
-<button id="left">&laquo;</button>
-<button id="right">&raquo;</button>
-<div class="block"></div>
- 
+    <button id="left">&laquo;</button>
+    <button id="right">&raquo;</button>
+    <div class="block"></div>
+<div id="green">
+    <button id="go1">&raquo; Animate green1</button>
+    <button id="go2">&raquo; Animate green2</button>
+    <button id="go3">&raquo; Animate Both</button>
+    <button id="go4">&raquo; Reset</button>
+    <div id="green1">Animation</div>
+    <div id="green2">Fun</div>
+</div>
 
- 
-</body>
-</html>
+
 <script>
+    $( "#go1" ).click(function() {
+  $( "#green1" )
+    .animate({
+      width: "90%"
+    }, {
+      queue: false,
+      duration: 3000
+    })
+    .animate({ fontSize: "24px" }, 1500 )
+    .animate({ borderRightWidth: "15px" }, 1500 );
+});
+ 
+$( "#go2" ).click(function() {
+  $( "#green2" )
+    .animate({ width: "90%" }, 1000 )
+    .animate({ fontSize: "24px" }, 1000 )
+    .animate({ borderLeftWidth: "15px" }, 1000 );
+});
+ 
+$( "#go3" ).click(function() {
+  $( "#go1" ).add( "#go2" ).click();
+});
+ 
+$( "#go4" ).click(function() {
+  $( "div" ).css({
+    width: "",
+    fontSize: "",
+    borderWidth: ""
+  });
+});
         $( "#right" ).click(function() {
           $( ".block" ).animate({ "left": "+=50px" }, "slow" );
         });
@@ -33,3 +68,6 @@
           $( ".block" ).animate({ "left": "-=50px" }, "slow" );
         });
         </script>
+ 
+</body>
+</html>

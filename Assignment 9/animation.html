@@ -3,35 +3,33 @@
 <head>
   <meta charset="utf-8">
   <title>animate demo</title>
-  <style>
-  div {
-    position: absolute;
-    background-color: #abc;
-    left: 50px;
-    width: 90px;
-    height: 90px;
-    margin: 5px;
-  }
-  </style>
+  
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/animation.css">
 </head>
 <body>
+        <section class="red"></section>
+        <section class="orange"></section>
+        <section class="yellow"></section>
+        <section class="green"></section>
+        <section class="cyan"></section>
+        <section class="blue"></section>
+        <section class="purple"></section>
  
 <button id="left">&laquo;</button>
 <button id="right">&raquo;</button>
-<button id="down">&raquo;</button>
-<button id="up">&raquo;</button>
 <div class="block"></div>
  
-<script>
-$( "#right" ).click(function() {
-  $( ".block" ).animate({ "left": "+=50px" }, "slow" );
-});
- 
-$( "#left" ).click(function(){
-  $( ".block" ).animate({ "left": "-=50px" }, "slow" );
-});
-</script>
+
  
 </body>
 </html>
+<script>
+        $( "#right" ).click(function() {
+          $( ".block" ).animate({ "left": "+=50px" }, "slow" );
+        });
+         
+        $( "#left" ).click(function(){
+          $( ".block" ).animate({ "left": "-=50px" }, "slow" );
+        });
+        </script>

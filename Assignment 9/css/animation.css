@@ -1,0 +1,71 @@
+/*designed by sara*/
+ @charset "utf-8";
+/*css document*/
+
+ body{ background-color: black; }
+ section{
+ 	width: 100vw;
+ 	height: 5vh;
+ 	float:left;
+ 	animation-name: fade-in;
+ 	animation-duration: 1s;
+ 	animation-fill-mode: backwards;
+	-moz-animation-name:fade-in;
+	-moz-animation-duration:1s;
+	-moz-animation-fill-mode:backwards;
+	-ms-animation-name:fade-in;
+	-ms-animation-duration:1s;
+	-ms-animation-fill-mode:backwards;
+	-o-animation-name:fade-in;
+	-o-animation-duration:1s;
+	-o-animation-fill-mode:backwards;
+	-webkit-animation-name:fade-in;
+	-webkit-animation-duration:1s;
+	-webkit-animation-fill-mode:backwards;
+
+ }
+
+ @keyframes fade-in{
+ 	0%  {opacity: 0;}
+ 	100% {opacity: 1;}
+
+ }
+
+   .red{background-color: red;
+   }
+
+   .orange{background-color: orange;
+ 	animation-delay: 1s;
+}
+
+   .yellow{background-color: yellow;
+ 	animation-delay: 2s;}
+
+   .green{background-color: green;
+ 	animation-delay: 3s;}
+
+   .cyan{background-color: cyan;
+ 	animation-delay: 4s;}
+
+   .blue{background-color: blue;
+ 	animation-delay: 5s;}
+
+   .purple{background-color: purple;
+ 	animation-delay: 6s;}
+
+
+
+			.block {
+				position: absolute;
+				background-color: antiquewhite;
+				left: 50px;
+				width: 90px;
+				height: 90px;
+				margin: 5px;
+			}
+			
+
+
+
+
+

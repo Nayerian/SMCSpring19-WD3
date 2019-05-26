@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Ops+One|Fontdiner+Swanky|Shojumaru|UnifrakturCook:700|Vollkorn+SC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Black+Ops+One|Shojumaru|UnifrakturCook:700|UnifrakturMaguntia&display=swap');
+body{
+    background-image: linear-gradient(-150deg,#469099, #f4be7e,skyblue);
+}
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h2{
+    font-family: 'Vollkorn SC', serif;
+}
+.logo{
+    font-family: 'UnifrakturCook', cursive;
+    color:white;
+  }
+.container{
+    background-color: rgba(255, 255, 255, 0.68);
+}
+.first-row{
+    margin-top: 10%;
+}
+.navbar{
+    background-image: linear-gradient(-210deg,#469099, #f4be7e);
+}
+.featurette-img{
+   
+    margin-right: 100%;
+}
+
+
+
+

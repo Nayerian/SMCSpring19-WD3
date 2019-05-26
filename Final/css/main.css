@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Black+Ops+One|Shojumaru|UnifrakturCook:700|UnifrakturMaguntia&display=swap');
 body{
     background-image: linear-gradient(-150deg,#469099, #f4be7e,red);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 p{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -30,7 +33,9 @@ h2{
    
     margin-right: 100%;
 }
-
-
-
-
+.contact{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 90%;
+    height: 80%;
+}

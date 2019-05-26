@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Black+Ops+One|Fontdiner+Swanky|Shojumaru|UnifrakturCook:700|Vollkorn+SC&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Black+Ops+One|Shojumaru|UnifrakturCook:700|UnifrakturMaguntia&display=swap');
 body{
-    background-image: linear-gradient(-150deg,#469099, #f4be7e,skyblue);
+    background-image: linear-gradient(-150deg,#469099, #f4be7e,red);
 }
 p{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

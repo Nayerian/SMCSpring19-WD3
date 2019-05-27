@@ -10,39 +10,21 @@ function AddItemToCart(type, item) {
         switch (item) {
             case 1:
                 shoppingCart.push(cards[0]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
             case 2:
                 shoppingCart.push(cards[1]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
             case 3:
                 shoppingCart.push(cards[2]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
             case 4:
                 shoppingCart.push(cards[3]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
             case 5:
                 shoppingCart.push(cards[4]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
             case 6:
                 shoppingCart.push(cards[5]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
         }
     }
@@ -50,39 +32,21 @@ function AddItemToCart(type, item) {
         switch (item) {
             case 1:
                 shoppingCart.push(cards[0]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
             case 2:
                 shoppingCart.push(cards[1]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
             case 3:
                 shoppingCart.push(cards[2]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
             case 4:
                 shoppingCart.push(cards[3]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
             case 5:
                 shoppingCart.push(cards[4]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
             case 6:
                 shoppingCart.push(cards[5]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
         }
     }
@@ -90,44 +54,25 @@ function AddItemToCart(type, item) {
         switch (item) {
             case 1:
                 shoppingCart.push(cards[0]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
             case 2:
                 shoppingCart.push(cards[1]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
             case 3:
                 shoppingCart.push(cards[2]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
             case 4:
                 shoppingCart.push(cards[3]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
             case 5:
                 shoppingCart.push(cards[4]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
             case 6:
                 shoppingCart.push(cards[5]);
-                console.log('%c Items', 'color: orange; font-weight: bold');
-                console.log(item);
-                console.log({ shoppingCart });
                 break;
         }
     }
     sessionStorage.setItem('cart', JSON.stringify(shoppingCart));
-    console.log('updated session storage');
     return;
 }
 

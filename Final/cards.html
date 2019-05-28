@@ -38,11 +38,14 @@
           <li class="nav-item">
             <a class="nav-link " href="contact.html">Contact Us</a>
           </li>
-          <li>
-            <a href="checkout.html"><img class="d-block img-fluid cart" src="img/cart.png" alt="cart"></a>
-          </li>
         </ul>
-
+      </div>
+      <div class="collapse navbar-collapse" style="padding-right:5%">
+          <ul class="navbar-nav ml-auto">
+              <li>
+                  <a href="checkout.html"><img class="d-block img-fluid cart" src="img/cart.png" alt="cart"></a>
+                </li>
+          </ul>
       </div>
     </nav>
   </header>
@@ -61,8 +64,13 @@
         <div class="list-group">
           <a href="cards.html" class="list-group-item active">Cards</a>
           <a href="toys.html" class="list-group-item">Toys</a>
-          <a href="supplies.html" class="list-group-item">Supplies</a>
-          <a href="checkout.html"><img class="d-block img-fluid cart1" src="img/cart.png" alt="cart"></a>
+          <a href="supplies.html" class="list-group-item">Supplies</a>        
+          <a href="checkout.html" class="list-group-item">
+            View Cart  <span class="badge badge-secondary badge-pill" id="cartItemCount">1</span>
+          </a> 
+        </div>
+        <div>
+            
         </div>
 
       </div>
@@ -110,7 +118,7 @@
                 <p class="card-text">Need a birthday present? A gift for the holidays? This is it. The Bundle’s 10 booster packs and accessories make it a great gift for any Magic player.</p>
               </div>
               <div class="card-footer">
-                <button onclick="AddItemToCart('card', 1)" type="button" class="btn btn-primary btn-sm"
+                <button onclick="AddItemToCart('card', 1); updatePill()" type="button" class="btn btn-primary btn-sm"
                   id="btnContactUs">Add to Cart</button>
               </div>
             </div>
@@ -127,7 +135,7 @@
                 <p class="card-text">join Gideon Jace Chandra & Nissa who join forces in their battle against the Eldrazi & take the oath to retake the world! Oath of the Gatewatch is all about teamwork, designed to support four-player games better than most any set in Magic history.</p>
               </div>
               <div class="card-footer">
-                <button onclick="AddItemToCart('card', 2)" type="button" class="btn btn-primary btn-sm"
+                <button onclick="AddItemToCart('card', 2); updatePill()" type="button" class="btn btn-primary btn-sm"
                   id="btnContactUs">Add to Cart</button>
               </div>
             </div>
@@ -145,7 +153,7 @@
                 </p>
               </div>
               <div class="card-footer">
-                <button onclick="AddItemToCart('card', 3)" type="button" class="btn btn-primary btn-sm"
+                <button onclick="AddItemToCart('card', 3); updatePill()" type="button" class="btn btn-primary btn-sm"
                   id="btnContactUs">Add to Cart</button>
               </div>
             </div>
@@ -163,7 +171,7 @@
                 </p>
               </div>
               <div class="card-footer">
-                <button onclick="AddItemToCart('card', 4)" type="button" class="btn btn-primary btn-sm"
+                <button onclick="AddItemToCart('card', 4); updatePill()" type="button" class="btn btn-primary btn-sm"
                   id="btnContactUs">Add to Cart</button>
               </div>
             </div>
@@ -184,7 +192,7 @@
                     </p>
               </div>
               <div class="card-footer">
-                <button onclick="AddItemToCart('card', 5)" type="button" class="btn btn-primary btn-sm"
+                <button onclick="AddItemToCart('card', 5); updatePill()" type="button" class="btn btn-primary btn-sm"
                   id="btnContactUs">Add to Cart</button>
               </div>
             </div>
@@ -202,7 +210,7 @@
                 </p>
               </div>
               <div class="card-footer">
-                <button onclick="AddItemToCart('card', 6)" type="button" class="btn btn-primary btn-sm"
+                <button onclick="AddItemToCart('card', 6); updatePill()" type="button" class="btn btn-primary btn-sm"
                   id="btnContactUs">Add to Cart</button>
               </div>
             </div>
@@ -240,6 +248,17 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script src="MTGSiteController.js"></script>
+  <script>
+    $(document).ready(function () {
+      updatePill();
+    });
+
+    function updatePill(){
+      var cart = JSON.parse(sessionStorage.getItem('cart'));
+      document.getElementById('cartItemCount').innerHTML =
+         `<span class="badge badge-secondary badge-pill" id="itemCount">${cart.length}</span>`;
+    }
+  </script>
 </body>
 
 </html>

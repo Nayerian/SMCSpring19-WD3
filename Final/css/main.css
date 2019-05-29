@@ -44,10 +44,7 @@ h2{
     background-image: linear-gradient(-210deg,#469099, #f4be7e);
 
 }
-.featurette-img{
-   
-    margin-right: 100%;
-}
+
 .contact{
     margin-top: 10%;
     margin-bottom: 20%;
@@ -69,7 +66,7 @@ h2{
 }
 @keyframes bright{
     0%{
-        filter:brightness(200%);
+        filter:brightness(255%);
         top: 5px;
         left: 10px;
     }
@@ -102,3 +99,7 @@ h2{
 .footer{
     margin-bottom: 5%;
 }
+.nav-item{
+    font-family: 'Vollkorn SC', serif;
+}
+

@@ -71,16 +71,9 @@ h2{
         left: 10px;
     }
 
-    25% {
-        background-color: red;
-        top: 300px;
-        left: 150px;
-    }
 
     100% {
-        background-color: indigo;
-        top: 100px;
-        left: 500px;
+        filter:brightness(100%);
     }
 }
 .card-title{

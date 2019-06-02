@@ -9,7 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="../css/main.css">
   <title>Products</title>
 </head>
 
@@ -17,7 +17,7 @@
   <!-- Navigation -->
   <header>
     <nav class="navbar navbar-expand-md navbar-light fixed-bottom ">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="../index.html">
         <h3 class="logo">Magic the gathering</h3>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -27,10 +27,10 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="cards.html">Products</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="cards.html">Products</a>
           </li>
           <li class="nav-item">
             <a class="nav-link " href="about.html">Learn</a>
@@ -38,15 +38,18 @@
           <li class="nav-item">
             <a class="nav-link " href="contact.html">Contact Us</a>
           </li>
-        
         </ul>
-
+      </div>
+      <div class="collapse navbar-collapse" style="padding-right:5%">
+          <ul class="navbar-nav ml-auto">
+          </ul>
       </div>
     </nav>
   </header>
 
 
   <!-- Page Content -->
+  
   <div class="container">
 
 
@@ -56,9 +59,15 @@
 
         <h1 class="my-4 mtg">MTG Shop</h1>
         <div class="list-group">
-          <a href="cards.html" class="list-group-item">Cards</a>
-          <a href="toys.html" class="list-group-item active">Toys</a>
-          <a href="supplies.html" class="list-group-item">Supplies</a>
+          <a href="cards.html" class="list-group-item active">Cards</a>
+          <a href="toys.html" class="list-group-item">Toys</a>
+          <a href="supplies.html" class="list-group-item">Supplies</a>        
+          <a href="checkout.html" class="list-group-item">
+            View Cart  <span class="badge badge-secondary badge-pill" id="cartItemCount">1</span>
+          </a> 
+        </div>
+        <div>
+            
         </div>
 
       </div>
@@ -74,13 +83,13 @@
           </ol>
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <img class="d-block img-fluid" src="img/carousel/900.350/Magic-The-Gathering-Duels-of-the-Planeswalkers-2012_0.jpg" alt="First slide">
+              <img class="d-block img-fluid" src="../img/carousel/900.350/4.jpg">
             </div>
             <div class="carousel-item">
-              <img class="d-block img-fluid" src="img/carousel/900.350/magic-the-gathering-art-2577.jpg" alt="Second slide">
+              <img class="d-block img-fluid" src="../img/carousel/900.350/3.png" alt="Second slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block img-fluid" src="img/carousel/900.350/magic_angel.0.jpg" alt="Third slide">
+              <img class="d-block img-fluid" src="../img/carousel/900.350/2.png" alt="First slide" alt="Third slide">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -92,27 +101,64 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
+        <div class="container">
+          <div class="row">
+              <div class="col">
+                  <button type="button" class="btn btn-outline-primary carousel-pauser">Pause</button>
+              </div>
+          </div>
+        </div>
+      
 
         <div class="row" id="itemContainer">
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/toys/Screen Shot 2019-05-28 at 6.48.57 PM.jpeg" alt=""></a>
+              <a href="#"><img class="card-img-top" src="../img/cards/MTG-Core-set-2019.jpg" alt="MTG"></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Garruk Wildspeaker Vinyl Figure</a>
+                  <a href="#">Core Set 2019 </a>
                 </h4>
-                <h5>$21.99</h5>
-                <p class="card-text">100% Toy
-                  Imported
-                  20 Point articulation
-                  Funko did it again!
-                  Check out the other Magic: The Gathering Legacy Figures!
-                  
+                <h5>$35.94</h5>
+                <p class="card-text">Need a birthday present? A gift for the holidays? This is it. The Bundle’s 10 booster packs and accessories make it a great gift for any Magic player.</p>
+              </div>
+              <div class="card-footer">
+                <button onclick="AddItemToCart('card', 1); updatePill()" type="button" class="btn btn-primary btn-sm"
+                  id="btnContactUs">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="../img/cards/2.jpg" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">The Gatewatch</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">join Gideon Jace Chandra & Nissa who join forces in their battle against the Eldrazi & take the oath to retake the world! Oath of the Gatewatch is all about teamwork, designed to support four-player games better than most any set in Magic history.</p>
+              </div>
+              <div class="card-footer">
+                <button onclick="AddItemToCart('card', 2); updatePill()" type="button" class="btn btn-primary btn-sm"
+                  id="btnContactUs">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="../img/cards/3.png" alt="mtg"></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Dominaria</a>
+                </h4>
+                <h5>$79.99</h5>
+                <p class="card-text">Welcome back to dominaria, the Nexus of the Magic Multiverse! All early magic sets except for Arabian nights and homelands took place here!
                 </p>
               </div>
               <div class="card-footer">
-                <button onclick="AddItemToCart('toy', 1)" type="button" class="btn btn-primary btn-sm"
+                <button onclick="AddItemToCart('card', 3); updatePill()" type="button" class="btn btn-primary btn-sm"
                   id="btnContactUs">Add to Cart</button>
               </div>
             </div>
@@ -120,44 +166,17 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/toys/1.jpg" alt=""></a>
+              <a href="#"><img class="card-img-top" src="../img/cards/4.jpg" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Chandra Nalaar - Pop! Vinyl Figure</a>
+                  <a href="#">Ravnica Allegiance</a>
                 </h4>
-                <h5>$11.99</h5>
-                <p class="card-text">100% Toy
-                  Imported
-                  Collect them All!
-                  Stands 3 3/4 inches tall
-                  Funko did it again!
-                  </p>
-              </div>
-              <div class="card-footer">
-                <button onclick="AddItemToCart('toy', 2)" type="button" class="btn btn-primary btn-sm"
-                  id="btnContactUs">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/toys/2.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Liliana Vess-Vinyl Figure</a>
-                </h4>
-                <h5>$15.52</h5>
-                <p class="card-text">100% Toy
-                  Imported
-                  Collect them All!
-                  Stands 3 3/4 inches tall
-                  Funko did it again!
-                  
+                <h5>$26.99</h5>
+                <p class="card-text">Stand with your guild. Ravnica is one of magic's most beloved settings, where Guilds jockey for power and control and multicolored cards show up in force.
                 </p>
               </div>
               <div class="card-footer">
-                <button onclick="AddItemToCart('toy', 3)" type="button" class="btn btn-primary btn-sm"
+                <button onclick="AddItemToCart('card', 4); updatePill()" type="button" class="btn btn-primary btn-sm"
                   id="btnContactUs">Add to Cart</button>
               </div>
             </div>
@@ -165,67 +184,38 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/toys/3.jpeg" alt=""></a>
+              <a href="#"><img class="card-img-top" src="../img/cards/5.jpg" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Sarkhan Vol Vinyl Figure</a>
+                  <a href="#">MTG-XLN-BU-EN Ixalan</a>
                 </h4>
-                <h5>$20.99</h5>
-                <p class="card-text">100% Toy
-                  Imported
-                  Collect them All!
-                  Stands 3 3/4 inches tall
-                  Funko did it again!
-                  
+                <h5>$34.99</h5>
+                <p class="card-text">Brave the Unknown!
+                    Ixalan features double-faced cards!
+                    Ixalan features three brand-new planes walker cards, including the introduction of Huatli!
+                    English Edition
+                    </p>
+              </div>
+              <div class="card-footer">
+                <button onclick="AddItemToCart('card', 5); updatePill()" type="button" class="btn btn-primary btn-sm"
+                  id="btnContactUs">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="../img/cards/6.jpg" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">War of The Spark </a>
+                </h4>
+                <h5>$34.99</h5>
+                <p class="card-text"> Your War of the Spark Bundle includes 10 booster packs with at least one PLANESWALKER IN EVERY PACK, 80 plus basic land cards, 1 Spindown life counter, and a player’s guide.
                 </p>
               </div>
               <div class="card-footer">
-                <button onclick="AddItemToCart('toy', 4)" type="button" class="btn btn-primary btn-sm"
-                  id="btnContactUs">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/toys/4.png" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Nicol Bolas Vinyl Figure</a>
-                </h4>
-                <h5>$20.49</h5>
-                <p class="card-text">100% Toy
-                  Imported
-                  Collect them All!
-                  Stands 3 3/4 inches tall
-                  Funko did it again!
-                  </p>
-              </div>
-              <div class="card-footer">
-                <button onclick="AddItemToCart('toy', 5)" type="button" class="btn btn-primary btn-sm"
-                  id="btnContactUs">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/toys/5.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Jace Beleren Vinyl Figure</a>
-                </h4>
-                <h5>$12.00</h5>
-                <p class="card-text">100% Toy
-                  Imported
-                  Collect them All!
-                  Stands 3 3/4 inches tall
-                  Funko did it again!
-                  
-                </p>
-              </div>
-              <div class="card-footer">
-                <button onclick="AddItemToCart('toy', 6)" type="button" class="btn btn-primary btn-sm"
+                <button onclick="AddItemToCart('card', 6); updatePill()" type="button" class="btn btn-primary btn-sm"
                   id="btnContactUs">Add to Cart</button>
               </div>
             </div>
@@ -242,15 +232,13 @@
 
   </div>
   <!-- /.container -->
-<!-- Footer -->
-<hr>
-<footer class="container footer">
-   <p class="float-right "><a href="#">Back to top</a></p>
-   <p>&copy; 2017-2019 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
- </footer>
 
-    <!-- /.container -->
-  </footer>
+  <!-- Footer -->
+  <hr>
+   <footer class="container footer">
+      <p class="float-right "><a href="#">Back to top</a></p>
+      <p>&copy; 2017-2019 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -264,6 +252,18 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script src="MTGSiteController.js"></script>
+  <script src="../main.js"></script>
+  <script>
+    $(document).ready(function () {
+      updatePill();
+    });
+
+    function updatePill(){
+      var cart = JSON.parse(sessionStorage.getItem('cart'));
+      document.getElementById('cartItemCount').innerHTML =
+         `<span class="badge badge-secondary badge-pill" id="itemCount">${cart.length}</span>`;
+    }
+  </script>
 </body>
 
 </html>

@@ -12,6 +12,12 @@ p{
 }
 h2{
     font-family: 'Vollkorn SC', serif;
+    color: red;
+}
+h3{
+    font-family: 'Vollkorn SC', serif;
+    color: black;
+
 }
 .logo{
     font-family: 'UnifrakturCook', cursive;
@@ -106,4 +112,15 @@ h2{
     text-shadow:  2px 2px black;
     font-size: 15px;
 
+}
+.jumbotron{
+    background-image: url(../img/learn/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.newmtg{
+    font-family: 'Vollkorn SC', cursive;
+    color:red;
+    text-shadow:  2px 2px black;
+    font-size: 50px;
 }

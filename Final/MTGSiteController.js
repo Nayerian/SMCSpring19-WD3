@@ -80,99 +80,99 @@ function AddItemToCart(type, item) {
 // Using hard coded arrays for product data.
 var cards = [
     {
-        Name: "Item One",
+        Name: "Core Set 2019",
+        Price: 35.94,
+        Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
+    },
+    {
+        Name: "The Gatewatch",
         Price: 24.99,
         Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
-        Name: "Item Two",
-        Price: 24.99,
+        Name: "Dominaria",
+        Price: 79.99,
         Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
-        Name: "Item Three",
-        Price: 24.99,
+        Name: "Ravnica Allegiance",
+        Price: 26.99,
         Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
-        Name: "Item Four",
-        Price: 24.99,
+        Name: "MTG-XLN-BU-EN Ixalan",
+        Price: 34.99,
         Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
-        Name: "Item Five",
-        Price: 24.99,
-        Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
-    },
-    {
-        Name: "Item Six",
-        Price: 24.99,
+        Name: "War of the Spark",
+        Price: 34.99,
         Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
 ]
 
 var toys = [
     {
-        Name: "Item One",
-        Price: 24.99,
+        Name: "Garruk Wildspeaker Vinyl Figure",
+        Price: 21.99,
         Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
-        Name: "Item Two",
-        Price: 24.99,
+        Name: "Chandra Nalaar - Pop! Vinyl Figure",
+        Price: 11.99,
         Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
-        Name: "Item Three",
-        Price: 24.99,
+        Name: "Liliana Vess - Vinyl Figure",
+        Price: 15.52,
         Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
-        Name: "Item Four",
-        Price: 24.99,
+        Name: "Sarkhan Vol Vinyl Figure",
+        Price: 20.99,
         Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
-        Name: "Item Five",
-        Price: 24.99,
+        Name: "Nicol Bolas Vinyl Figure",
+        Price: 20.49,
         Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
-        Name: "Item Six",
-        Price: 24.99,
+        Name: "Jace Beleren",
+        Price: 12.00,
         Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
 ]
 
 var supplies = [
     {
-        Name: "Item One",
-        Price: 24.99,
+        Name: "Set of 20 Metal MTG Buff Counters",
+        Price: 12.99,
         Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
-        Name: "Item Two",
-        Price: 24.99,
+        Name: "12 Pack Life Counters",
+        Price: 14.99,
         Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
-        Name: "Item Three",
-        Price: 24.99,
+        Name: "Hex Dice Wood Chest with Magnetic Lid",
+        Price: 39.99,
         Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
-        Name: "Item Four",
-        Price: 24.99,
+        Name: "Game Card Storage Case",
+        Price: 59.99,
         Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
-        Name: "Item Five",
-        Price: 24.99,
+        Name: "100 PCS Colorful Backs Card Sleeves",
+        Price: 5.99,
         Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
-        Name: "Item Six",
-        Price: 24.99,
+        Name: "The Arisen Deck Protector Sleeves",
+        Price: 8.99,
         Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
 ]

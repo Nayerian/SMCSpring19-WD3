@@ -63,7 +63,7 @@
           <a href="toys.html" class="list-group-item">Toys</a>
           <a href="supplies.html" class="list-group-item">Supplies</a>        
           <a href="checkout.html" class="list-group-item">
-            View Cart  <span class="badge badge-secondary badge-pill" id="cartItemCount">1</span>
+            View Cart  <span class="badge badge-secondary badge-pill" id="cartItemCount">0</span>
           </a> 
         </div>
         <div>
@@ -251,8 +251,10 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="MTGSiteController.js"></script>
+  <script src="../MTGSiteController.js"></script>
   <script src="../main.js"></script>
+
+  <!--Script to Update Shopping Cart Pill-->
   <script>
     $(document).ready(function () {
       updatePill();
@@ -264,6 +266,7 @@
          `<span class="badge badge-secondary badge-pill" id="itemCount">${cart.length}</span>`;
     }
   </script>
+
 </body>
 
 </html>

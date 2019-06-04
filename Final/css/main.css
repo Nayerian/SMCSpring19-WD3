@@ -50,18 +50,18 @@ h3{
     background-image: linear-gradient(-210deg,#469099, #f4be7e);
 
 }
-
 .contact{
     margin-top: 10%;
-    margin-bottom: 20%;
+    margin-bottom: 50%;
     width: 90%;
-    height: 100%;
    padding-top: 5%;
    padding-bottom: 5%;
    padding-left: 5%;
+   padding-bottom: 5%;
    font-family: 'Vollkorn SC', serif;
 
 }
+
 .heroimg{
     animation-name: bright;
     animation-duration: 2s;
@@ -96,7 +96,7 @@ h3{
     
 }
 .footer{
-    margin-bottom: 5%;
+    margin-bottom: 7%;
 }
 .nav-item{
     font-family: 'Vollkorn SC', serif;

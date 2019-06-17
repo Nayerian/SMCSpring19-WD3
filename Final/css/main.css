@@ -12,7 +12,7 @@ p{
 }
 h2{
     font-family: 'Vollkorn SC', serif;
-    color: red;
+    color: black;
 }
 h3{
     font-family: 'Vollkorn SC', serif;
@@ -29,7 +29,7 @@ h3{
     position: absolute;
     top: 25%;
     left: 50%;
-    transform: translate(-50%, -150%);
+    transform: translate(-50%, -110%);
     font-family: 'Vollkorn SC', cursive;
     color:red;
     text-shadow:  2px 2px black;
@@ -37,7 +37,7 @@ h3{
   }
   .mtg{
     font-family: 'Vollkorn SC', cursive;
-    color:red;
+    color:black;
   }
   
 .container{
@@ -86,15 +86,7 @@ h3{
     
     font-family: 'Vollkorn SC', serif;
 }
-.cart{
-    float:left;
-    margin-left:90%;
-}
-.cart1{
-    margin-left:1%;
-    margin-top: 1%;
     
-}
 .footer{
     margin-bottom: 7%;
 }
@@ -124,6 +116,10 @@ h3{
     text-shadow:  2px 2px black;
     font-size: 50px;
 }
-.aboutpic{
-    margin-left: .3%;
+.active{
+    background-color: #469099;
+}
+
+a{
+    color: #478dcb;
 }
